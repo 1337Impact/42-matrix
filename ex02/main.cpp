@@ -1,29 +1,4 @@
-#include <iostream>
-#include <math.h>
-#include <stdio.h>
-#include <vector>
-#include <assert.h>
-
-typedef std::vector<float> V;
-typedef std::vector<V *> M;
-
-float lerp(float u, float v, float t) { return fma(t, v - u, u); }
-
-V *lerp(V u, V v, float t) {
-  V *res = new V();
-  for (unsigned long i = 0; i < v.size(); i++) {
-    res->push_back(lerp(u[i], v[i], t));
-  }
-  return res;
-}
-
-M *lerp(M u, M v, float t) {
-  M *res = new M();
-  for (unsigned long i = 0; i < u.size() && i < v.size(); i++) {
-    res->push_back(lerp(*(u[i]), *(v[i]), t));
-  }
-  return res;
-}
+#include "fma.hpp"
 
 template <typename T> void print_vector(std::vector<T> v) {
   for (unsigned long i = 0; i < v.size(); i++) {
