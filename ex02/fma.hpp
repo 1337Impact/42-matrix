@@ -1,3 +1,6 @@
+#ifndef FMA_HPP
+#define FMA_HPP
+
 #include <iostream>
 #include <math.h>
 #include <vector>
@@ -11,3 +14,5 @@ float lerp(float u, float v, float t);
 V *lerp(V u, V v, float t);
 
 M *lerp(M u, M v, float t);
+
+#endif
