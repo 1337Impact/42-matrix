@@ -4,7 +4,7 @@ int main() {
     Vector v1({-1., 6.});
     Vector v2({3., 2.});
 
-    std::cout << "v1: " << v1 << std::endl;
+    std::cout << "∂∂A: " << v1 << std::endl;
     std::cout << "v2: " << v2 << std::endl;
 
     Vector result = v1.add(v2);
